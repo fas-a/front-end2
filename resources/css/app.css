@@ -1,0 +1,75 @@
+.bg-nav{
+    background-color: #d9d9d9;
+}
+
+.fs-7{
+    font-size: 12px;
+}
+
+#hr-landing{
+    border-width: 2px;
+    border-color: black;
+}
+
+.carousel-indicator button{
+    min-height: 12px;
+    max-width: 12px;
+}
+
+.item:after{
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.89), 25%, rgba(0,0,0,0));
+}
+
+.fs-11{
+    font-size: 11px;
+}
+
+.dashed-border{
+    border-style: dashed;
+    border-width: 2px;
+    border-color: black;
+}
+
+.text-gray{
+    color: #7A7A7A;
+}
+
+.search-wrapper{
+    position: relative;
+}
+
+.search-wrapper input{
+    position: absolute;
+    right: 0;
+}
+
+table.thead-border > thead > tr > th {
+    border: 2px dashed #7A7A7A;
+    background-color: #d9d9d9;
+}
+
+table.thead-border > tbody > tr > th, table.thead-border > tbody > tr > td {
+    border-left: 2px solid#7A7A7A;
+    border-bottom: 2px solid#7A7A7A;
+    border-right: 2px solid#7A7A7A;
+}
+
+.table-rounded{
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.control-buttons{
+    display: none;
+}
+
+td:hover .control-buttons{
+    display: flex;
+}
