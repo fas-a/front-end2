@@ -26,7 +26,7 @@
         </div>
 
         <div class="row row-cols-3 mt-2 gx-5 gy-2 bg-body-tertiary">
-        @foreach($furtherPosts as $post)
+        @foreach($posts as $post)
             <div class="col-4">
                 <x-further-reading-card :post='$post' />
             </div>

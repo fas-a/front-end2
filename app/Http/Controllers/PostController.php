@@ -13,6 +13,14 @@ class PostController extends Controller
         $this->postModel = new PostModel;
     }
 
+    public function landing()
+    {
+        $data = [
+            'posts' => $this->postModel::all()
+        ];
+        return view('blog.landing', $data);
+    }
+
     public function index()
     {
         $data = [
