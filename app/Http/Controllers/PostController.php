@@ -33,4 +33,14 @@ class PostController extends Controller
         $postData->save();
         return redirect()->back();
     }
+
+    public function update(Request $request, $id)
+    {
+        $postData = PostModel::find($id);
+        $postData->title = $request->input('title');
+        $postData->content = $request->input('content');
+        $postData->image = $request->input('image');
+        $postData->save();
+        return redirect()->back();
+    }
 }

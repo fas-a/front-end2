@@ -53,10 +53,10 @@
                     <div class="d-flex align-content-center">
                         <input type="image" src="{{ asset('assets/trash.svg') }}" class='btn-primary mx-1 control-buttons' />
                         <input type="image" src="{{ asset('assets/view.svg') }}" class='btn-primary mx-2 control-buttons' />
-                        <input type="image" src="{{ asset('assets/setting.svg') }}" class='btn-primary mx-1 control-buttons edit-button' data-toggle="modal" data-title="{{ $post->title }}" data-content="{{ $post->content }}" data-image="{{ $post->image }}" data-target="#editModal"/>
+                        <input type="image" src="{{ asset('assets/setting.svg') }}" class='btn-primary mx-1 control-buttons edit-button' data-toggle="modal" data-edit-link="{{ route('updateData', ['id' => $post->id]) }}" data-title="{{ $post->title }}" data-content="{{ $post->content }}" data-image="{{ $post->image }}" data-target="#editModal"/>
                         {{-- pop model start here  --}}
                         <!-- Button trigger modal -->
-                        {{-- <input type="image" src="{{ asset('assets/setting.svg') }}" class='btn-primary mx-1 control-buttons edit-button' data-toggle="modal" data-title="{{ $post->title }}" data-content="{{ $post->content }}" data-image="{{ $post->image }}" data-target="#editModal"/> --}}
+                        {{-- <input type="image" src="{{ asset('assets/setting.svg') }}" class='btn-primary mx-1 control-buttons edit-button' data-toggle="modal" data-edit-link="{{ $post->id }}" data-title="{{ $post->title }}" data-content="{{ $post->content }}" data-image="{{ $post->image }}" data-target="#editModal"/> --}}
                         <!-- Modal -->
                         {{-- pop model end here  --}}
                     </div>
@@ -78,5 +78,6 @@
             $('#editModal input[name="title"]').val(title);
             $('#editModal textarea[name="content"]').val(content);
             $('#editModal input[name="image"]').val(image);
+            $('#edit-form').attr('action', $(this).data('edit-link'));
         });
-    </script>
+</script>
