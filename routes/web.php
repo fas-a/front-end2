@@ -24,4 +24,5 @@ Route::prefix('/dashboard')->group(function (){
     Route::get('/', [PostController::class, 'index'])->name('getData');
     Route::post('/', [PostController::class, 'store'])->name('postData');
     Route::post('/{id}', [PostController::class, 'update'])->name('updateData');
+    Route::get('/{id}', [PostController::class, 'destroy'])->name('deleteData');
 });

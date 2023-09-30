@@ -43,4 +43,11 @@ class PostController extends Controller
         $postData->save();
         return redirect()->back();
     }
+
+    public function destroy($id)
+    {
+        $postData = PostModel::find($id);
+        $postData->delete();
+        return redirect()->back();
+    }
 }

@@ -51,7 +51,9 @@
                 <div class="d-flex justify-content-between">
                     {{ $post->title }}
                     <div class="d-flex align-content-center">
-                        <input type="image" src="{{ asset('assets/trash.svg') }}" class='btn-primary mx-1 control-buttons' />
+                        <form action="{{ route('deleteData', ['id' => $post->id]) }}" method="get">
+                            <input type="image" src="{{ asset('assets/trash.svg') }}" class='btn-primary mx-1 control-buttons' />
+                        </form>
                         <input type="image" src="{{ asset('assets/view.svg') }}" class='btn-primary mx-2 control-buttons' />
                         <input type="image" src="{{ asset('assets/setting.svg') }}" class='btn-primary mx-1 control-buttons edit-button' data-toggle="modal" data-edit-link="{{ route('updateData', ['id' => $post->id]) }}" data-title="{{ $post->title }}" data-content="{{ $post->content }}" data-image="{{ $post->image }}" data-target="#editModal"/>
                         {{-- pop model start here  --}}
